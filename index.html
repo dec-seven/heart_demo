@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heart Beat</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body onclick="start()">
+  <audio autoplay id="my_music">
+    <source src="https://music.163.com/song/media/outer/url?id=467953710.mp3" type="audio/mpeg">
+  </audio>
+  <script src="js/three.min.js"></script>
+  <script src="js/MeshSurfaceSampler.js"></script>
+  <script src="js/TrackballControls.js"></script>
+  <script src="js/simplex-noise.js"></script>
+  <script src="js/OBJLoader.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    function start() {
+      var my_music = document.getElementById('my_music');
+      if(my_music.paused || my_music.ended) {
+        console.log("11");
+        my_music.play()
+      }
+    }
+    
+  </script>
+</body>
+</html>
